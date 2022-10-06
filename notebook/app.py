@@ -249,7 +249,7 @@ class JupyterNotebookApp(NotebookConfigShimMixin, LabServerApp):
             (
                 rf"/{self.file_url_prefix}/((?!.*\.ipynb($|\?)).*)",
                 web.RedirectHandler,
-                {"url": "/edit/{0}"},
+                {"url": "/files/{0}"},
             )
         )
         self.handlers.append(("/?", RedirectHandler))
